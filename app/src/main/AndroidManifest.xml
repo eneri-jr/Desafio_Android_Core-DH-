@@ -9,18 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DHFoods">
-
-        <!-- Splash Screen: !-->
+        <activity android:name=".RegisterActivity"></activity>
+        <!-- Splash Screen: ! -->
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-
-        <!-- Tela home: !-->
-        <activity android:name=".LoginActivity"
-            android:label="@string/app_name" ></activity>
+        </activity> <!-- Tela home: ! -->
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" />
     </application>
 
 </manifest>
