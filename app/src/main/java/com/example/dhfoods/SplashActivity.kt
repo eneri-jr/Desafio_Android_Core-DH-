@@ -1,12 +1,10 @@
 package com.example.dhfoods
 
 import android.content.Intent
-import android.graphics.drawable.Drawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import androidx.core.content.res.ResourcesCompat
 
 class SplashActivity : AppCompatActivity() {
 
@@ -21,7 +19,7 @@ class SplashActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this@SplashActivity, MainActivity::class.java)
+            val intent = Intent(this@SplashActivity, LoginActivity::class.java)
             startActivity(intent)
         }, splashTimeOut.toLong())
 

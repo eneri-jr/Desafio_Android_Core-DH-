@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">DH Foods</string>
+    <string name="app_name">Digital House Foods</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">"LOG IN"</string>
+    <string name="or">"OR"</string>
+    <string name="register">REGISTER</string>
 </resources>
