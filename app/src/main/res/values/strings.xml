@@ -5,4 +5,6 @@
     <string name="login">"LOG IN"</string>
     <string name="or">"OR"</string>
     <string name="register">REGISTER</string>
+    <string name="name">Name</string>
+    <string name="repPass">Repeat password</string>
 </resources>
