@@ -1,5 +1,6 @@
 package com.example.dhfoods
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -19,7 +20,6 @@ class MainActivity : AppCompatActivity(), RestaurantAdapter.OnclickRestaurantLis
         rvRestaurant.setHasFixedSize(true)
     }
 
-    //Retorna uma lista de alunos fixa:
     fun getAllRestaurant():ArrayList<Restaurant>{
         val restaurant1 = Restaurant(1, R.drawable.image1,"Tony Roma's","Av. Lanvandisca, 717 - Indianópolis, São Paulo", "Fecha às 22:00")
         val restaurant2 = Restaurant(2, R.drawable.image4,"Ayoama - Moema","Alameda dos Arapanés, 532 - Moema", "Fecha às 00:00")
@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity(), RestaurantAdapter.OnclickRestaurantLis
         return arrayListOf(restaurant1, restaurant2, restaurant3, restaurant4)
     }
 
-    //Texto que ira aparecer quando clicar em algo da lista:
     override fun onClickRestaurant(position: Int) {
         var restaurant = listRestaurant.get(position)
-        Toast.makeText(this, restaurant.nome, Toast.LENGTH_LONG).show()
+        val intent = Intent(this@MainActivity, RestaurantActivity::class.java).putExtra("restaurant", restaurant)
+        startActivity(intent)
     }
 
 
