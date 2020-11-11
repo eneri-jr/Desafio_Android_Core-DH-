@@ -70,7 +70,7 @@
         android:layout_marginBottom="170dp"/>
 
     <Button
-        android:id="@+id/btLogin"
+        android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:text="@string/register"
