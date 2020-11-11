@@ -15,5 +15,10 @@ class LoginActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        btLogin.setOnClickListener(){
+            val intent = Intent(this@LoginActivity, MainActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }
