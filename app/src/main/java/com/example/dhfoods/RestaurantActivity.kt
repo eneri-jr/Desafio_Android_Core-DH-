@@ -4,8 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_restaurant.*
+import kotlinx.android.synthetic.main.menu_toolbar.*
 
 class RestaurantActivity : AppCompatActivity(), MenuAdapter.OnclickMenuListener {
     var listMenu = getAllMenu()
@@ -15,10 +15,6 @@ class RestaurantActivity : AppCompatActivity(), MenuAdapter.OnclickMenuListener 
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_restaurant)
 
-        rvMenu.adapter = adapter
-        rvMenu.layoutManager = GridLayoutManager(this, 2)
-        rvMenu.setHasFixedSize(true)
-
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(false)
 
@@ -27,6 +23,10 @@ class RestaurantActivity : AppCompatActivity(), MenuAdapter.OnclickMenuListener 
         ivRestaurant.setImageResource(opRestaurant.img)
         tvTitle.text = opRestaurant.nome
 
+        rvMenu.adapter = adapter
+        rvMenu.layoutManager = GridLayoutManager(this, 2)
+        rvMenu.setHasFixedSize(true)
+
     }
 
     fun getAllMenu():ArrayList<Menu>{
@@ -34,7 +34,7 @@ class RestaurantActivity : AppCompatActivity(), MenuAdapter.OnclickMenuListener 
 
         val listMenu = arrayListOf<Menu>()
 
-        for (x in 0..10){
+        for (x in 0..9){
             listMenu.add(menu)
         }
         return listMenu
@@ -46,9 +46,9 @@ class RestaurantActivity : AppCompatActivity(), MenuAdapter.OnclickMenuListener 
     }
 
     override fun onClickMenu(position: Int) {
-        var restaurant = listMenu.get(position)
-//        val intent = Intent(this@r, RestaurantActivity::class.java).putExtra("restaurant", restaurant)
-//        startActivity(intent)
+        var itemMenu = listMenu.get(position)
+        val intent = Intent(this@RestaurantActivity, ItemMenuActivity::class.java).putExtra("itemMenu", itemMenu)
+        startActivity(intent)
     }
 
 }
