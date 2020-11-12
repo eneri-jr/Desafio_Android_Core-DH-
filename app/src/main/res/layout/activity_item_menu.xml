@@ -7,7 +7,7 @@
     tools:context=".RestaurantActivity"
     android:orientation="vertical">
 
-        <include layout="@layout/menu_toolbar"/>
+    <include layout="@layout/item_toolbar"/>
 
     <TextView
         android:id="@+id/tvPratos"
@@ -16,19 +16,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:text="Pratos principais"
-        android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:text="Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusant doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis."
+        android:textSize="15dp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvMenu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            android:layout_marginLeft="10dp"
-            tools:listitem="@layout/card_menu"
-            tools:ignore="MissingConstraints"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-    </LinearLayout>
-
+</LinearLayout>

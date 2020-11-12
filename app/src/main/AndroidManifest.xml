@@ -9,8 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DHFoods">
-        <activity android:name=".RestaurantActivity"
-            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar.Bridge"/>
+        <activity android:name=".ItemMenuActivity"
+            android:theme="@style/Theme" />
+        <activity
+            android:name=".RestaurantActivity"
+            android:theme="@style/Theme" />
         <activity android:name=".MainActivity" />
         <activity
             android:name=".RegisterActivity"
