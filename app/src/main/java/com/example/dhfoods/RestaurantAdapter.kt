@@ -18,8 +18,6 @@ RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>(){
         return RestaurantViewHolder(itemView)
     }
 
-
-    //vai criar os elementos da lista com as info da lista:
     override fun onBindViewHolder(holder: RestaurantAdapter.RestaurantViewHolder, position: Int) {
         var restaurant = listRestaurant.get(position)
         holder.ivImgRestaurant.setImageResource(restaurant.img)
@@ -30,12 +28,10 @@ RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>(){
 
     override fun getItemCount() = listRestaurant.size
 
-    //Click sobre os itens da lista (Chamado no construtor):
     interface OnclickRestaurantListener{
         fun onClickRestaurant(position: Int)
     }
 
-    //pegar elementos da tela (item_Restaurante)
     inner class RestaurantViewHolder(itemView: View):RecyclerView.ViewHolder(itemView), View.OnClickListener{
         var ivImgRestaurant: ImageView = itemView.findViewById(R.id.ivImgRestaurant)
         var tvNomeRestaurant: TextView = itemView.findViewById(R.id.tvNomeRestaurant)
@@ -52,5 +48,4 @@ RecyclerView.Adapter<RestaurantAdapter.RestaurantViewHolder>(){
                 listener.onClickRestaurant(position)
         }
     }
-
 }

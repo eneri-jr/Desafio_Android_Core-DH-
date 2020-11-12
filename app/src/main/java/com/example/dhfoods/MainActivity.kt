@@ -34,6 +34,4 @@ class MainActivity : AppCompatActivity(), RestaurantAdapter.OnclickRestaurantLis
         val intent = Intent(this@MainActivity, RestaurantActivity::class.java).putExtra("restaurant", restaurant)
         startActivity(intent)
     }
-
-
 }
