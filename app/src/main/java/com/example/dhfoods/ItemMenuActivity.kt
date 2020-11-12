@@ -19,7 +19,6 @@ class ItemMenuActivity : AppCompatActivity() {
         ivItemMenu.setImageResource(opMenu.img)
         tvTitle.text = opMenu.nome1
         tvTitle2.text = opMenu.nome2
-
     }
 
     override fun onSupportNavigateUp(): Boolean {

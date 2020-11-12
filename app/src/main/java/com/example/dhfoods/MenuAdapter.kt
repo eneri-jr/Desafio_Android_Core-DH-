@@ -18,8 +18,6 @@ class MenuAdapter(private val listMenu: ArrayList<Menu>, val listener: OnclickMe
         return MenuViewHolder(itemView)
     }
 
-
-    //vai criar os elementos da lista com as info da lista:
     override fun onBindViewHolder(holder: MenuAdapter.MenuViewHolder, position: Int) {
         var menu = listMenu.get(position)
         holder.ivImgMenu.setImageResource(menu.img)
@@ -29,7 +27,6 @@ class MenuAdapter(private val listMenu: ArrayList<Menu>, val listener: OnclickMe
 
     override fun getItemCount() = listMenu.size
 
-    //Click sobre os itens da lista (Chamado no construtor):
     interface OnclickMenuListener{
         fun onClickMenu(position: Int)
     }
@@ -49,5 +46,4 @@ class MenuAdapter(private val listMenu: ArrayList<Menu>, val listener: OnclickMe
                 listener.onClickMenu(position)
         }
     }
-
 }

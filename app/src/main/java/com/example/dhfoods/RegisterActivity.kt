@@ -10,7 +10,6 @@ class RegisterActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
 
-        //Colocando o botão na toolbar:
         getSupportActionBar()?.setDisplayHomeAsUpEnabled(true)
         getSupportActionBar()?.setHomeButtonEnabled(true)
         getSupportActionBar()?.setTitle("Register")
@@ -19,6 +18,5 @@ class RegisterActivity : AppCompatActivity() {
             val intent = Intent(this@RegisterActivity, MainActivity::class.java)
             startActivity(intent)
         }
-
     }
 }
